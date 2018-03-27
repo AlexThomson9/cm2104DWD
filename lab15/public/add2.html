@@ -20,7 +20,9 @@
    var name = $('#name').val();
    var quote = $('#quote').val();
 
-var obj = { "name":name, "quote":quote};
+var obj = {};
+obj.name = name;
+obj.quote = quote;
 console.log(obj);
 console.log(JSON.stringify(obj));
    $.ajax({
