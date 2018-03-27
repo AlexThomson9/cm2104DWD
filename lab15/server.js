@@ -26,11 +26,18 @@ app.get('/all', function(req, res) {
  });
 });
 
-app.post('/quotes', function (req, res) {
+/*app.post('/quotes', function (req, res) {
   console.log(req.body);
  db.collection('quotes').save(req.body, function(err, result) {
  if (err) throw err;
  console.log('saved to database')
  res.redirect('/')
  })
-})
+})*/
+
+
+app.post('/quotes', function(req, res){
+	var obj = {};
+	console.log('body: ' + JSON.stringify(req.body));
+	res.send(req.body);
+});
