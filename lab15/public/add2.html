@@ -20,11 +20,12 @@
    var name = $('#name').val();
    var quote = $('#quote').val();
 
+var obj = { "name":name, "quote":quote};
 
    $.ajax({
        url: "/quotes",
        type: "POST",
-       data: JSON.stringify( name, quote),
+       data: JSON.stringify(obj),
        contentType: "application/json"
    }).done(function( msg ) {
        console.log(msg);
