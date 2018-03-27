@@ -1,8 +1,6 @@
 var express = require('express');
 var app = express();
 
-app.get('/test', function(req, res){
- res.send("this is route 2");
-});
+app.use(express.static('public'));
 
 app.listen(8080);
