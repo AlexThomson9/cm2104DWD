@@ -28,7 +28,7 @@ console.log(JSON.stringify(obj));
    $.ajax({
        url: "/quotes",
        type: "POST",
-       data: JSON.parse(obj),
+       data: obj,
        contentType: "application/json"
    }).done(function( msg ) {
        console.log(msg);
