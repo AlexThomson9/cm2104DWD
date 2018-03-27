@@ -21,7 +21,8 @@
    var quote = $('#quote').val();
 
 var obj = { "name":name, "quote":quote};
-
+console.log(obj);
+console.log(JSON.stringify(obj));
    $.ajax({
        url: "/quotes",
        type: "POST",
