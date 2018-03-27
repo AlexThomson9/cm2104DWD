@@ -21,17 +21,19 @@
    var quote = $('#quote').val();
 
 
+   $.ajax({
+       url: "/quote",
+       type: "POST",
+       data: JSON.stringify( name, quote),
+       contentType: "application/json"
+   }).done(function( msg ) {
+       console.log(msg);
+   });
+
 
 
  });
- $.ajax({
-     url: "/quote",
-     type: "POST",
-     data: JSON.stringify( name, quote),
-     contentType: "application/json"
- }).done(function( msg ) {
-     console.log(msg);
- });
+
 
 
 
