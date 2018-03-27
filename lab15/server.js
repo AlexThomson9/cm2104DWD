@@ -37,7 +37,6 @@ app.get('/all', function(req, res) {
 
 
 app.post('/quotes', function(req, res){
-	var obj = {};
 	console.log('body: ' + JSON.stringify(req.body));
 	//res.send(req.body);
   db.collection('quotes').save(req.body, function(err, result) {

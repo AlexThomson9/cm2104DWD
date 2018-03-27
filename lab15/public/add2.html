@@ -26,10 +26,11 @@ obj.quote = quote;
 console.log(obj);
 console.log(JSON.stringify(obj));
    $.ajax({
-       url: "/quotes",
+
        type: "POST",
        data: JSON.stringify(obj),
-       contentType: "application/json"
+       contentType: "application/json",
+       url: "/quotes"
    }).done(function( msg ) {
        console.log(msg);
    });
