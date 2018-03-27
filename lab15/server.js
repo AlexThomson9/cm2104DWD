@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.bodyParser());
+app.use(bodyParser());
 var db;
 MongoClient.connect(url, function(err, database){
  if(err) throw err;
